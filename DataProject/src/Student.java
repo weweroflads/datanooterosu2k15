@@ -67,6 +67,9 @@ public class Student {
      */
     private String projects;
 
+    /**
+     * No-argument constructor.
+     */
     public Student() {
         this.employment = new String[6];
     }
@@ -153,17 +156,112 @@ public class Student {
      * @param x
      *            the major
      */
-    public final void setMajor(String x) {
-        this.major = x;
+    public final void setDegrees(String x) {
+        this.degrees = x;
     }
 
     /**
-     * To get major.
+     * To get the former degrees.
      *
-     * @return the major of student.
+     * @return the former degrees of student.
      */
-    public final String getMajor() {
-        return this.major;
+    public final String getDegrees() {
+        return this.degrees;
+    }
+
+    /**
+     * To set previous degrees.
+     *
+     * @param x
+     *            the major
+     */
+    public final void setComputerSkills(String x) {
+        this.computerSkills = x;
+    }
+
+    /**
+     * To get the former degrees.
+     *
+     * @return the former degrees of student.
+     */
+    public final String getComputerSkills() {
+        return this.computerSkills;
+    }
+
+    /**
+     * To set previous degrees.
+     *
+     * @param x
+     *            the major
+     */
+    public final void setLanguageSkills(String x) {
+        this.languageSkills = x;
+    }
+
+    /**
+     * To get the former degrees.
+     *
+     * @return the former degrees of student.
+     */
+    public final String getLanguageSkills() {
+        return this.languageSkills;
+    }
+
+    /**
+     * To set previous degrees.
+     *
+     * @param x
+     *            the major
+     */
+    public final void setPersonalSkills(String x) {
+        this.personalSkills = x;
+    }
+
+    /**
+     * To get the former degrees.
+     *
+     * @return the former degrees of student.
+     */
+    public final String getPersonalSkills() {
+        return this.personalSkills;
+    }
+
+    /**
+     * To set previous degrees.
+     *
+     * @param x
+     *            the major
+     */
+    public final void setCourses(String x) {
+        this.courses = x;
+    }
+
+    /**
+     * To get the former degrees.
+     *
+     * @return the former degrees of student.
+     */
+    public final String getProjects() {
+        return this.projects;
+    }
+
+    /**
+     * To set previous degrees.
+     *
+     * @param x
+     *            the major
+     */
+    public final void setProjects(String x) {
+        this.projects = x;
+    }
+
+    /**
+     * To get the former degrees.
+     *
+     * @return the former degrees of student.
+     */
+    public final String getCourses() {
+        return this.courses;
     }
 
     /**
