@@ -270,16 +270,11 @@ public class Student {
      * @param
      */
     public final int setJobEntry(String title, String description) {
-        int entered = 1;
-        for (int i = 0; i < 4; i += 2) {
-            if (!this.employment[i].equals("")) {
-                this.employment[i] = title;
-                this.employment[i + 1] = description;
-                entered = 0;
-                this.jobs++;
-            }
-        }
-        return entered;
+        this.employment[this.jobs * 2] = title;
+        this.employment[this.jobs * 2 + 1] = description;
+        this.jobs++;
+        return 0;
+
     }
 
     /**

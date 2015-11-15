@@ -109,10 +109,14 @@ public final class Data {
                 {
                     String title = new String();
                     String description = new String();
+                    int a = 0;
                     if (cellIterator.hasNext()) {
+                        a += 1;
                         if (columnIndex + 1 != cell.getColumnIndex()) {
                             studenterinos[j].setJobEntry("", "");
-                            columnIndex += 2;
+                            if (a <= 2) {
+                                columnIndex += 2;
+                            }
                         } else {
                             title = cell.getStringCellValue();
 
