@@ -463,7 +463,8 @@ public final class Comp {
     public static Queue<Pair<String, Integer>> topTen(
             Map<String, Integer> values) {
         Queue<Pair<String, Integer>> top = new Queue2<Pair<String, Integer>>();
-        for (int i = values.size(); i > values.size() - 10; i--) {
+        int sizerino = values.size();
+        for (int i = sizerino; i > sizerino - 10; i--) {
             int max = 0;
             String werd = "";
             for (Pair<String, Integer> x : values) {
@@ -493,14 +494,14 @@ public final class Comp {
             Student[] search, int currentYear) {
         Set<Integer> ind = new Set2<Integer>();
         if (graduating) {
-            for (int i = 0; i < search.length; i++) {
+            for (int i = 0; i < 91; i++) {
                 int temp = search[i].getGradYear();
-                if (temp == currentYear) {
+                if (temp <= currentYear) {
                     ind.add(i);
                 }
             }
         } else {
-            for (int i = 0; i < search.length; i++) {
+            for (int i = 0; i < 91; i++) {
                 int temp = search[i].getGradYear();
                 if (temp != currentYear) {
                     ind.add(i);
@@ -522,14 +523,14 @@ public final class Comp {
     public static Set<Integer> jobsToSearch(boolean graduating, Job[] search) {
         Set<Integer> ind = new Set2<Integer>();
         if (graduating) {
-            for (int i = 0; i < search.length; i++) {
+            for (int i = 0; i < 261; i++) {
                 String temp = search[i].type();
                 if (temp.indexOf("Career") > -1) {
                     ind.add(i);
                 }
             }
         } else {
-            for (int i = 0; i < search.length; i++) {
+            for (int i = 0; i < 261; i++) {
                 String temp = search[i].type();
                 if (temp.indexOf("Career") == -1) {
                     ind.add(i);

@@ -125,16 +125,20 @@ public class Job {
      */
     private void populateMajors(String lineIn) {
         // TODO Auto-generated method stub
-        int i = 0;
-        while (i < lineIn.length() && lineIn.indexOf(",") != -1) {
-            String major = lineIn.substring(i, lineIn.indexOf(","));
+        String line = lineIn;
 
-            this.majors.add(major, 1);
+        while (line.indexOf(",") != -1) {
+            String major = line.substring(0, line.indexOf(","));
 
-            i = lineIn.indexOf(",") + 1;
+            if (!this.majors.hasKey(major)) {
+                this.majors.add(major, 1);
+            }
+
+            line = line.substring(line.indexOf(",") + 2, line.length());
+
         }
 
-        this.majorsString = lineIn;
+        this.majorsString = line;
     }
 
     /**
@@ -149,7 +153,7 @@ public class Job {
         // TODO Auto-generated method stub
 
         this.requirements = lineIn;
-        this.preferences = "";
+        this.preferences = lineIn;
     }
 
     //------------------- Constructor -----------------------------

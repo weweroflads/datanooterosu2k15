@@ -43,7 +43,7 @@ public class LineChartDemo1 extends ApplicationFrame {
         final CategoryDataset dataset = this.createDataset(A, B);
         final JFreeChart chart = this.createChart(dataset);
         final ChartPanel chartPanel = new ChartPanel(chart);
-        chartPanel.setPreferredSize(new Dimension(500, 270));
+        chartPanel.setPreferredSize(new Dimension(1100, 700));
         this.setContentPane(chartPanel);
     }
 

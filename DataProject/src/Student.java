@@ -72,6 +72,9 @@ public class Student {
      */
     public Student() {
         this.employment = new String[6];
+        this.jobs = 0;
+        this.graduationMonth = 0;
+        this.graduationYear = 0;
     }
 
     /**
@@ -90,6 +93,9 @@ public class Student {
      * @return the major of student.
      */
     public final String getMajor() {
+        if (this.major == null) {
+            this.major = "";
+        }
         return this.major;
     }
 
@@ -109,6 +115,9 @@ public class Student {
      * @return the minor of student.
      */
     public final String getMinor() {
+        if (this.minor == null) {
+            this.minor = "";
+        }
         return this.minor;
     }
 
@@ -166,6 +175,9 @@ public class Student {
      * @return the former degrees of student.
      */
     public final String getDegrees() {
+        if (this.degrees == null) {
+            this.degrees = "";
+        }
         return this.degrees;
     }
 
@@ -185,6 +197,9 @@ public class Student {
      * @return the former degrees of student.
      */
     public final String getComputerSkills() {
+        if (this.computerSkills == null) {
+            this.computerSkills = "";
+        }
         return this.computerSkills;
     }
 
@@ -204,6 +219,9 @@ public class Student {
      * @return the former degrees of student.
      */
     public final String getLanguageSkills() {
+        if (this.languageSkills == null) {
+            this.languageSkills = "";
+        }
         return this.languageSkills;
     }
 
@@ -223,6 +241,9 @@ public class Student {
      * @return the former degrees of student.
      */
     public final String getPersonalSkills() {
+        if (this.personalSkills == null) {
+            this.personalSkills = "";
+        }
         return this.personalSkills;
     }
 
@@ -242,6 +263,9 @@ public class Student {
      * @return the former degrees of student.
      */
     public final String getProjects() {
+        if (this.projects == null) {
+            this.projects = "";
+        }
         return this.projects;
     }
 
@@ -261,6 +285,9 @@ public class Student {
      * @return the former degrees of student.
      */
     public final String getCourses() {
+        if (this.courses == null) {
+            this.courses = "";
+        }
         return this.courses;
     }
 
@@ -285,6 +312,9 @@ public class Student {
      * @return The title of given job.
      */
     public final String getJobTitle(int index) {
+        if (this.employment[2 * index] == null) {
+            this.employment[2 * index] = "";
+        }
         return this.employment[2 * index];
     }
 
@@ -296,6 +326,9 @@ public class Student {
      * @return The description of given job.
      */
     public final String getJobDescription(int index) {
+        if (this.employment[2 * index + 1] == null) {
+            this.employment[2 * index + 1] = "";
+        }
         return this.employment[2 * index + 1];
     }
 

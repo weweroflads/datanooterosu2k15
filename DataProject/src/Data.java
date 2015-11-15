@@ -104,7 +104,7 @@ public final class Data {
                 }
             }
             if (cellIterator.hasNext()) {
-                for (i = 0; i < 2; i++)
+                for (i = 0; i < 3; i++)
 
                 {
                     String title = new String();
