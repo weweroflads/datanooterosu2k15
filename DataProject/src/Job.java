@@ -1,9 +1,6 @@
 import components.map.Map;
-import components.map.Map;
 import components.map.Map4;
 import components.set.Set;
-import components.set.Set;
-import components.set.Set1L;
 import components.set.Set1L;
 
 /**
@@ -34,6 +31,11 @@ public class Job {
      * Relevant majors for Job.
      */
     private Map<String, Integer> majors = new Map4<String, Integer>();
+
+    /**
+     * Relevant majors for Job as a string.
+     */
+    private String majorsString;
 
     /**
      * 'Required' Job Qualifications.
@@ -131,6 +133,8 @@ public class Job {
 
             i = lineIn.indexOf(",") + 1;
         }
+
+        this.majorsString = lineIn;
     }
 
     /**
@@ -148,25 +152,6 @@ public class Job {
         this.preferences = "";
     }
 
-    /**
-     * Populates indicator sets.
-     */
-    private void establishIndicators() {
-        this.requiredIndicators.add("MUST BE");
-        this.requiredIndicators.add("ARE REQUIRED");
-        this.requiredIndicators.add("NEED");
-        this.requiredIndicators.add("REQUIRED");
-        this.requiredIndicators.add("MINIMUM");
-        this.requiredIndicators.add("BASIC");
-
-        this.preferredIndicators.add("PREFERRED");
-        this.preferredIndicators.add("NOT REQUIRED");
-
-        this.titleIndicators.add("Analyst");
-        this.titleIndicators.add("Scientist");
-
-    }
-
     //------------------- Constructor -----------------------------
 
     /**
@@ -176,7 +161,7 @@ public class Job {
      *            source of Job information
      */
     public Job() {
-        this.establishIndicators();
+
     }
 
     //----------------- useful methods ----------------------------
@@ -187,7 +172,7 @@ public class Job {
      *
      * @return this.title
      */
-    public final String title() {
+    public String title() {
         return this.title;
     }
 
@@ -196,7 +181,7 @@ public class Job {
      *
      * @return this.description
      */
-    public final String description() {
+    public String description() {
         return this.description;
     }
 
@@ -205,7 +190,7 @@ public class Job {
      *
      * @return this.type
      */
-    public final String type() {
+    public String type() {
         return this.type;
     }
 
@@ -214,8 +199,17 @@ public class Job {
      *
      * @return this.majors
      */
-    public final Map<String, Integer> majors() {
+    public Map<String, Integer> majors() {
         return this.majors;
+    }
+
+    /**
+     * Getter method for majors relevant to Job.
+     *
+     * @return this.majors
+     */
+    public String majorsString() {
+        return this.majorsString;
     }
 
     /**
